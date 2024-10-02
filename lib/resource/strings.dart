@@ -1,4 +1,4 @@
-class Strings {
+class AppStrings {
   /* Intro screen contents */
   static final welcomeTxt = '''Hi, my name is''';
   static final name = '''Jeevanandham.'''; // add . at the end
