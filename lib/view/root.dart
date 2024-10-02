@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:telit_solutions/controller/generalController.dart';
 import 'package:telit_solutions/resource/appClass.dart';
+import 'package:telit_solutions/view/howWeWork/howWeWork.dart';
 import 'package:telit_solutions/view/intro/intro.dart';
 import 'package:telit_solutions/widgets/appBar.dart';
 
@@ -33,18 +34,11 @@ class _RootScreenState extends ConsumerState<RootScreen> {
             return true;
           },
           child: Container(
-            decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.bottomCenter, end: Alignment.topCenter, colors: [Color(0xff112240), Color(0xff0a192f), Color(0xff020c1b)])),
+            color: Colors.white,
             height: AppClass().getMqHeight(context),
             child: Column(
               children: [
-                Consumer(builder: (context, ref, child) {
-                  var isScrollingUp = ref.watch(scrollControlProvider);
-                  return AnimatedOpacity(
-                    opacity: isScrollingUp ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 500),
-                    child: ActionBar(mScrollController),
-                  );
-                }),
+                ActionBar(mScrollController),
                 Expanded(
                   child: () {
                     ScreenType scrType = AppClass().getScreenType(context);
@@ -55,6 +49,7 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                         controller: mScrollController,
                         children: [
                           AutoScrollTag(key: ValueKey(0), controller: mScrollController, index: 0, child: Intro(mScrollController)),
+                          AutoScrollTag(key: ValueKey(1), controller: mScrollController, index: 0, child: HowWeWork(mScrollController)),
                         ],
                       );
                     });
