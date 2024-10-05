@@ -1,8 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:telit_solutions/controller/generalController.dart';
 import 'package:telit_solutions/resource/appClass.dart';
 import 'package:telit_solutions/resource/colors.dart';
 import 'package:telit_solutions/resource/responsive.dart';
@@ -37,9 +37,10 @@ class _ActionBarState extends ConsumerState<ActionBar> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
+            height: SizeConfig.getScreenHeight(context) * 0.06, // 10
             color: AppColors.primaryColor,
-            height: SizeConfig.getScreenHeight(context) * 0.04,
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
                     flex: 9,
@@ -50,7 +51,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                               left: SizeConfig.getScreenWidth(context) * 0.03),
                           child: Row(children: [
                             const Icon(
-                              Icons.phone_android_outlined,
+                              Icons.phone_iphone_rounded,
                               color: Colors.black54,
                               size: 20,
                             ),
@@ -79,28 +80,28 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         )
                       ],
                     )),
-                Expanded(
+                const Expanded(
                     flex: 3,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Image.asset(
-                          "assets/facebook.png",
-                          width: 20,
-                          height: 20,
-                          color: Colors.black54,
+                        Padding(
+                          padding: EdgeInsets.only(right: 8.0),
+                          child: Icon(Icons.facebook,
+                            color: Colors.black54,
+                            size: 20,),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Image.asset("assets/insta.png",
-                              width: 20, height: 20, color: Colors.black54),
+                          padding: EdgeInsets.only(right: 8.0),
+                          child: Icon(CupertinoIcons.globe,
+                            color: Colors.black54,
+                            size: 20,),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(
-                              left: 8.0,
-                              right: SizeConfig.getScreenWidth(context) * 0.02),
-                          child: Image.asset("assets/linkedin.png",
-                              width: 20, height: 20, color: Colors.black54),
+                          padding: EdgeInsets.only(right: 8.0),
+                          child: Icon(Icons.account_balance_outlined,
+                            color: Colors.black54,
+                            size: 20,),
                         ),
                       ],
                     ))
@@ -108,6 +109,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
             ),
           ),
           Container(
+            height: SizeConfig.getScreenHeight(context) * 0.11, // 30
             padding: EdgeInsets.only(left: SizeConfig.getScreenWidth(context) * 0.025),
             color: Colors.white,
             child: Row(
@@ -143,7 +145,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                           right: SizeConfig.getScreenWidth(context) * 0.025),
                       child: FilledButton(onPressed: () {},
                           style: FilledButton.styleFrom(),
-                          child: Text("Get In Touch")),
+                          child: const Text("Get In Touch")),
                     )
                   ]
                 ))
@@ -152,7 +154,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
           )
         ],
       );
-    }());
+    } ());
   }
 
   mOnTab(int i) {

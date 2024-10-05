@@ -1,12 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:telit_solutions/resource/responsive.dart';
-
-import '../../resource/appClass.dart';
-import '../../resource/colors.dart';
-import '../../resource/strings.dart';
 
 class IntroWeb extends StatefulWidget {
   AutoScrollController aScrollController;
@@ -21,32 +16,28 @@ class _IntroWebState extends State<IntroWeb> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: SizeConfig.getScreenHeight(context) - 0.14,
+      height: SizeConfig.getScreenHeight(context) - (SizeConfig.getScreenHeight(context) * 0.17),
       width: SizeConfig.getScreenWidth(context),
-      child: CarouselSlider(
-        options: CarouselOptions(
-          viewportFraction: 1,
-          autoPlay: true,
-
+      child: AbsorbPointer(
+        child: CarouselSlider(
+          options: CarouselOptions(
+            viewportFraction: 1,
+            autoPlay: true,
+          ),
+          items: ["assets/image1.jpg", "assets/image2.jpg", "assets/image3.jpg", "assets/image4.jpg"].map((i) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Container(
+                    child: Image.asset(
+                  i,
+                  height: double.infinity,
+                  width: SizeConfig.getScreenWidth(context),
+                  fit: BoxFit.fill,
+                ));
+              },
+            );
+          }).toList(),
         ),
-        items: [
-          "assets/image1.jpg",
-          "assets/image2.jpg",
-          "assets/image3.jpg",
-          "assets/image4.jpg"
-        ].map((i) {
-          return Builder(
-            builder: (BuildContext context) {
-              return Container(
-                  child: Image.asset(
-                    i,
-                    height: double.infinity,
-                    width: SizeConfig.getScreenWidth(context),
-                    fit: BoxFit.fill,
-                  ));
-            },
-          );
-        }).toList(),
       ),
     );
   }

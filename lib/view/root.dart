@@ -6,6 +6,8 @@ import 'package:telit_solutions/controller/generalController.dart';
 import 'package:telit_solutions/resource/appClass.dart';
 import 'package:telit_solutions/view/howWeWork/howWeWork.dart';
 import 'package:telit_solutions/view/intro/intro.dart';
+import 'package:telit_solutions/view/moto/moto.dart';
+import 'package:telit_solutions/view/partners/partners.dart';
 import 'package:telit_solutions/widgets/appBar.dart';
 
 
@@ -49,7 +51,10 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                         controller: mScrollController,
                         children: [
                           AutoScrollTag(key: ValueKey(0), controller: mScrollController, index: 0, child: Intro(mScrollController)),
-                          AutoScrollTag(key: ValueKey(1), controller: mScrollController, index: 0, child: HowWeWork(mScrollController)),
+                          AutoScrollTag(key: ValueKey(1), controller: mScrollController, index: 1, child: HowWeWork(mScrollController)),
+                          AutoScrollTag(key: ValueKey(2), controller: mScrollController, index: 2, child: Moto(mScrollController)),
+                          AutoScrollTag(key: ValueKey(3), controller: mScrollController, index: 3, child: Partners(mScrollController)),
+
                         ],
                       );
                     });

@@ -10,7 +10,7 @@ import 'package:telit_solutions/view/intro/introWeb.dart';
 class HowWeWork extends StatefulWidget {
   AutoScrollController aScrollController;
 
-  HowWeWork(this.aScrollController, {Key? key}) : super(key: key);
+  HowWeWork(this.aScrollController, {super.key});
 
   @override
   State<HowWeWork> createState() => _HowWeWorkState();
