@@ -37,7 +37,7 @@ class _HowWeWorkWebState extends State<HowWeWorkWeb> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.05),
+            padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.04),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,15 +50,36 @@ class _HowWeWorkWebState extends State<HowWeWorkWeb> {
                         width: SizeConfig.getScreenWidth(context) * 0.12,
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                         decoration:
-                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.2), borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                        child: Text("Discover",
+                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.4), borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child: Text("Supplies",
                             textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
                       ),
                       Container(
-                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
-                          width: SizeConfig.getScreenWidth(context) * 0.12,
+                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
+                          width: SizeConfig.getScreenWidth(context) * 0.15,
                           child: Text(
-                            "Together we determine your product vision based on your (customer) needs and vision on the future of your business.",
+                            "We provide IT and office equipment, including desktops, laptops, printers, peripherals, cartridges, laptop parts, networking items, CCTV cameras, and access control systems from top brands.",
+                            style: GoogleFonts.montserrat(color: Colors.black54, fontWeight: FontWeight.w500),
+                          )),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Container(
+                        width: SizeConfig.getScreenWidth(context) * 0.12,
+                        padding: EdgeInsets.only(top: 10, bottom: 10),
+                        decoration:
+                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.4), borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child: Text("Rental",
+                            textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
+                          width: SizeConfig.getScreenWidth(context) * 0.15,
+                          child: Text(
+                            "Our rental solutions are designed to offer flexibility and convenience for both short-term and long-term requirements.",
                             style: GoogleFonts.montserrat(color: Colors.black54, fontWeight: FontWeight.w500),
                           ))
                     ],
@@ -71,36 +92,15 @@ class _HowWeWorkWebState extends State<HowWeWorkWeb> {
                         width: SizeConfig.getScreenWidth(context) * 0.12,
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                         decoration:
-                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.2), borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                        child: Text("Develop",
+                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.4), borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child: Text("Network",
                             textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
                       ),
                       Container(
-                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
-                          width: SizeConfig.getScreenWidth(context) * 0.12,
+                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
+                          width: SizeConfig.getScreenWidth(context) * 0.15,
                           child: Text(
-                            "We develop the needed solution using agile methodologies.",
-                            style: GoogleFonts.montserrat(color: Colors.black54, fontWeight: FontWeight.w500),
-                          ))
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Container(
-                        width: SizeConfig.getScreenWidth(context) * 0.12,
-                        padding: EdgeInsets.only(top: 10, bottom: 10),
-                        decoration:
-                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.2), borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                        child: Text("Drive",
-                            textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
-                          width: SizeConfig.getScreenWidth(context) * 0.12,
-                          child: Text(
-                            "We deliver your solution to the user and, if needed, we maintain and develop your solutions towards the future",
+                            "Our Network Service allows our customers to quickly deploy LAN, MAN, and WAN environments that fit their networking needs and budget.",
                             style: GoogleFonts.montserrat(color: Colors.black54, fontWeight: FontWeight.w500),
                           ))
                     ],
@@ -115,49 +115,44 @@ class _HowWeWorkWebState extends State<HowWeWorkWeb> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.secondaryColor, width: 2.5),
-                        borderRadius: BorderRadius.circular(100)),
-                    width: 50,
-                    height: 50,
+                    decoration:
+                        BoxDecoration(border: Border.all(color: AppColors.secondaryColor, width: 2.5), borderRadius: BorderRadius.circular(100)),
+                    width: 60,
+                    height: 60,
                     child: Center(child: Text("1"))),
-                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.05),
+                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.1),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.secondaryColor, width: 2.5),
-                        borderRadius: BorderRadius.circular(100)),
-                    width: 50,
-                    height: 50,
+                    decoration:
+                        BoxDecoration(border: Border.all(color: AppColors.secondaryColor, width: 2.5), borderRadius: BorderRadius.circular(100)),
+                    width: 60,
+                    height: 60,
                     child: Center(child: Text("2"))),
-                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.05),
+                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.1),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.secondaryColor, width: 2.5),
-                        borderRadius: BorderRadius.circular(100)),
-                    width: 50,
-                    height: 50,
+                    decoration:
+                        BoxDecoration(border: Border.all(color: AppColors.secondaryColor, width: 2.5), borderRadius: BorderRadius.circular(100)),
+                    width: 60,
+                    height: 60,
                     child: Center(child: Text("3"))),
-                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.05),
+                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.1),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.secondaryColor, width: 2.5),
-                        borderRadius: BorderRadius.circular(100)),
-                    width: 50,
-                    height: 50,
+                    decoration:
+                        BoxDecoration(border: Border.all(color: AppColors.secondaryColor, width: 2.5), borderRadius: BorderRadius.circular(100)),
+                    width: 60,
+                    height: 60,
                     child: Center(child: Text("4"))),
-                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.05),
+                Container(height: 2.5, color: AppColors.secondaryColor, width: SizeConfig.getScreenWidth(context) * 0.1),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.secondaryColor, width: 2.5),
-                        borderRadius: BorderRadius.circular(100)),
-                    width: 50,
-                    height: 50,
+                    decoration:
+                        BoxDecoration(border: Border.all(color: AppColors.secondaryColor, width: 2.5), borderRadius: BorderRadius.circular(100)),
+                    width: 60,
+                    height: 60,
                     child: Center(child: Text("5"))),
               ],
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.05),
+            padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.035),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,15 +165,15 @@ class _HowWeWorkWebState extends State<HowWeWorkWeb> {
                         width: SizeConfig.getScreenWidth(context) * 0.12,
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                         decoration:
-                        BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.2), borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                        child: Text("Document",
-                            textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
+                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.4), borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child:
+                            Text("AMC", textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
                       ),
                       Container(
-                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
-                          width: SizeConfig.getScreenWidth(context) * 0.12,
+                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
+                          width: SizeConfig.getScreenWidth(context) * 0.15,
                           child: Text(
-                            "We create a clear backlog to document the short and long term goals. We define the needs, translate them into requirements and design your solution.",
+                            "We provide AMC services for desktops, laptops, workstations, servers, switches, routers, printers, and both online and offline UPS systems.",
                             style: GoogleFonts.montserrat(color: Colors.black54, fontWeight: FontWeight.w500),
                           ))
                     ],
@@ -191,15 +186,15 @@ class _HowWeWorkWebState extends State<HowWeWorkWeb> {
                         width: SizeConfig.getScreenWidth(context) * 0.12,
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                         decoration:
-                        BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.2), borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                        child: Text("Deploy",
+                            BoxDecoration(color: AppColors.secondaryColor.withOpacity(0.4), borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                        child: Text("Services",
                             textAlign: TextAlign.center, style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold)),
                       ),
                       Container(
-                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
-                          width: SizeConfig.getScreenWidth(context) * 0.12,
+                          margin: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
+                          width: SizeConfig.getScreenWidth(context) * 0.15,
                           child: Text(
-                            "We will deploy your solution(s) following automated development pipelines and CI/CD based on your demands.",
+                            "We offer networking and security solutions, laptop repairs, upgrades, and data recovery. Additional services include monitor, printer, and UPS support, with pickup and drop-off for laptops.",
                             style: GoogleFonts.montserrat(color: Colors.black54, fontWeight: FontWeight.w500),
                           ))
                     ],

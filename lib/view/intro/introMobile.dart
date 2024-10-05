@@ -4,7 +4,6 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 
 import '../../resource/appClass.dart';
 import '../../resource/colors.dart';
-import '../../resource/strings.dart';
 
 class IntroMobile extends StatefulWidget {
   final AutoScrollController aScrollController;

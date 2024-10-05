@@ -34,7 +34,7 @@ class _PartnersWebState extends State<PartnersWeb> {
               Text("We partner with the",
                   style: GoogleFonts.ubuntu(
                       height: 1, fontSize: SizeConfig.getScreenWidth(context) * 0.03, fontWeight: FontWeight.bold, color: AppColors.primaryColor)),
-              Text("world's best clients",
+              Text("best clients",
                   style: GoogleFonts.ubuntu(
                       height: 1, fontSize: SizeConfig.getScreenWidth(context) * 0.03, fontWeight: FontWeight.bold, color: AppColors.secondaryColor)),
             ],
