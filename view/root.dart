@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:telit_solutions/controller/generalController.dart';
 import 'package:telit_solutions/resource/appClass.dart';
+import 'package:telit_solutions/view/footer/footer.dart';
 import 'package:telit_solutions/view/getInTouch/getItTouch.dart';
 import 'package:telit_solutions/view/ourCulture/ourCulture.dart';
 import 'package:telit_solutions/view/howWeWork/howWeWork.dart';
@@ -61,7 +62,7 @@ class _RootScreenState extends ConsumerState<RootScreen> {
                           AutoScrollTag(key: ValueKey(4), controller: mScrollController, index: 4, child: Vision(mScrollController)),
                           AutoScrollTag(key: ValueKey(5), controller: mScrollController, index: 5, child: Ourculture(mScrollController)),
                           AutoScrollTag(key: ValueKey(6), controller: mScrollController, index: 6, child: GetItTouch(mScrollController)),
-
+                          AutoScrollTag(key: ValueKey(7), controller: mScrollController, index: 7, child: Footer(mScrollController)),
                         ],
                       );
                     });
