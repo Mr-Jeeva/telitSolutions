@@ -24,13 +24,10 @@ class _VisionWebState extends State<VisionWeb> {
             width: SizeConfig.getScreenWidth(context) * 0.75,
             child: Column(
               children: [
-                Text("\"The Vision To be a premium corporate solutions provider with a clear focus on business diversification and customer satisfaction\"",
+                Text(
+                    "\"The Vision To be a premium corporate solutions provider with a clear focus on business diversification and customer satisfaction\"",
                     style: GoogleFonts.ubuntu(
-                      height: 1,
-                      fontWeight: FontWeight.bold,
-                      fontSize: SizeConfig.getScreenWidth(context) * 0.035,
-                      color: Colors.white
-                    )),
+                        height: 1, fontWeight: FontWeight.bold, fontSize: SizeConfig.getScreenWidth(context) * 0.035, color: Colors.white)),
                 Padding(
                   padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
                   child: Row(
@@ -38,9 +35,7 @@ class _VisionWebState extends State<VisionWeb> {
                       Text(
                         "#TelitSolutionsVision",
                         style: GoogleFonts.ubuntu(
-                            fontWeight: FontWeight.w500,
-                            fontSize: SizeConfig.getScreenWidth(context) * 0.03,
-                            color: AppColors.primaryColor),
+                            fontWeight: FontWeight.w500, fontSize: SizeConfig.getScreenWidth(context) * 0.03, color: AppColors.primaryColor),
                       ),
                     ],
                   ),

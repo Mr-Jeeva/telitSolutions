@@ -4,8 +4,6 @@ import 'package:telit_solutions/resource/responsive.dart';
 import 'package:telit_solutions/view/howWeWork/howWeWorkMobile.dart';
 import 'package:telit_solutions/view/howWeWork/howWeWorkTab.dart';
 import 'package:telit_solutions/view/howWeWork/howWeWorkWeb.dart';
-import 'package:telit_solutions/view/intro/introMobile.dart';
-import 'package:telit_solutions/view/intro/introWeb.dart';
 
 class HowWeWork extends StatefulWidget {
   AutoScrollController aScrollController;

@@ -26,11 +26,7 @@ class _MotoWebState extends State<MotoWeb> {
               children: [
                 Text("While our teams facilitate the best IT solution for your company, we make sure your experience is hassle-free.",
                     style: GoogleFonts.ubuntu(
-                      height: 1,
-                      fontWeight: FontWeight.bold,
-                      fontSize: SizeConfig.getScreenWidth(context) * 0.035,
-                      color: Colors.white
-                    )),
+                        height: 1, fontWeight: FontWeight.bold, fontSize: SizeConfig.getScreenWidth(context) * 0.035, color: Colors.white)),
                 Padding(
                   padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
                   child: Row(
@@ -38,9 +34,7 @@ class _MotoWebState extends State<MotoWeb> {
                       Text(
                         "#TogetherWeDevelopYourSuccess",
                         style: GoogleFonts.ubuntu(
-                            fontWeight: FontWeight.w500,
-                            fontSize: SizeConfig.getScreenWidth(context) * 0.03,
-                            color: AppColors.secondaryAlterColor),
+                            fontWeight: FontWeight.w500, fontSize: SizeConfig.getScreenWidth(context) * 0.03, color: AppColors.secondaryAlterColor),
                       ),
                     ],
                   ),

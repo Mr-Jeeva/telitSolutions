@@ -3,8 +3,6 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:telit_solutions/resource/responsive.dart';
 import 'package:telit_solutions/view/intro/introMobile.dart';
 import 'package:telit_solutions/view/intro/introWeb.dart';
-
-
 import 'introTab.dart';
 
 class Intro extends StatefulWidget {

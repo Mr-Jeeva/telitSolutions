@@ -12,9 +12,9 @@ class PartnersWeb extends StatefulWidget {
 }
 
 class _PartnersWebState extends State<PartnersWeb> {
-
   final scrollController = ScrollController();
   double offset = 0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,14 +45,17 @@ class _PartnersWebState extends State<PartnersWeb> {
                 children: [
                   InkWell(
                       onTap: () {
-                        if(offset > 0) {
+                        if (offset > 0) {
                           offset = offset - 300;
-                          scrollController.animateTo(offset,
-                              duration: Duration(seconds: 1), curve: Curves.easeIn);
+                          scrollController.animateTo(offset, duration: Duration(seconds: 1), curve: Curves.easeIn);
                           setState(() {});
                         }
                       },
-                      child: Icon(Icons.arrow_back_ios_rounded, size: SizeConfig.getScreenWidth(context) * 0.03,color: Colors.black54,)),
+                      child: Icon(
+                        Icons.arrow_back_ios_rounded,
+                        size: SizeConfig.getScreenWidth(context) * 0.03,
+                        color: Colors.black54,
+                      )),
                   Expanded(
                     child: SizedBox(
                       height: SizeConfig.getScreenWidth(context) * 0.15,
@@ -61,44 +64,40 @@ class _PartnersWebState extends State<PartnersWeb> {
                           scrollDirection: Axis.horizontal,
                           controller: scrollController,
                           itemBuilder: (cont, index) => Container(
-                            padding: EdgeInsets.only(right: index == 10 ? 0 : 20),
-                            child: Card(
-                              elevation: 5,
-                              color: Colors.white,
-                              child: Container(
-                                height: SizeConfig.getScreenWidth(context) * 0.15,
-                                width: SizeConfig.getScreenWidth(context) * 0.15,
-                                padding: const EdgeInsets.all(25),
-                                child: Image.asset(
-                                    "assets/partners/${index + 1}.png",
+                                padding: EdgeInsets.only(right: index == 10 ? 0 : 20),
+                                child: Card(
+                                  elevation: 5,
+                                  color: Colors.white,
+                                  child: Container(
+                                    height: SizeConfig.getScreenWidth(context) * 0.15,
+                                    width: SizeConfig.getScreenWidth(context) * 0.15,
+                                    padding: const EdgeInsets.all(25),
+                                    child: Image.asset(
+                                      "assets/partners/${index + 1}.png",
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                          )),
+                              )),
                     ),
                   ),
                   InkWell(
                       onTap: () {
-                        if(offset < 1500) {
+                        if (offset < 1500) {
                           offset = offset + 300;
-                          scrollController.animateTo(offset,
-                              duration: Duration(seconds: 1), curve: Curves.easeIn);
+                          scrollController.animateTo(offset, duration: Duration(seconds: 1), curve: Curves.easeIn);
                           setState(() {});
                         }
                       },
-                      child: Icon(Icons.arrow_forward_ios_rounded, size: SizeConfig.getScreenWidth(context) * 0.03,color: Colors.black54)),
+                      child: Icon(Icons.arrow_forward_ios_rounded, size: SizeConfig.getScreenWidth(context) * 0.03, color: Colors.black54)),
                 ],
               ),
               Padding(
                 padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   InkWell(
                     onTap: () {
                       offset = 0;
-                      scrollController.animateTo(0,
-                          duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      scrollController.animateTo(0, duration: Duration(seconds: 1), curve: Curves.easeIn);
                       setState(() {});
                     },
                     child: Padding(
@@ -109,8 +108,7 @@ class _PartnersWebState extends State<PartnersWeb> {
                   InkWell(
                     onTap: () {
                       offset = 300;
-                      scrollController.animateTo(300,
-                          duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      scrollController.animateTo(300, duration: Duration(seconds: 1), curve: Curves.easeIn);
                       setState(() {});
                     },
                     child: Padding(
@@ -121,8 +119,7 @@ class _PartnersWebState extends State<PartnersWeb> {
                   InkWell(
                     onTap: () {
                       offset = 600;
-                      scrollController.animateTo(600,
-                          duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      scrollController.animateTo(600, duration: Duration(seconds: 1), curve: Curves.easeIn);
                       setState(() {});
                     },
                     child: Padding(
@@ -133,8 +130,7 @@ class _PartnersWebState extends State<PartnersWeb> {
                   InkWell(
                     onTap: () {
                       offset = 900;
-                      scrollController.animateTo(900,
-                          duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      scrollController.animateTo(900, duration: Duration(seconds: 1), curve: Curves.easeIn);
                       setState(() {});
                     },
                     child: Padding(
@@ -145,8 +141,7 @@ class _PartnersWebState extends State<PartnersWeb> {
                   InkWell(
                     onTap: () {
                       offset = 1200;
-                      scrollController.animateTo(1200,
-                          duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      scrollController.animateTo(1200, duration: Duration(seconds: 1), curve: Curves.easeIn);
                       setState(() {});
                     },
                     child: Padding(
@@ -155,18 +150,16 @@ class _PartnersWebState extends State<PartnersWeb> {
                     ),
                   ),
                   InkWell(
-                        onTap: () {
-                          offset = 1500;
-                          scrollController.animateTo(1500,
-                              duration: Duration(seconds: 1), curve: Curves.easeIn);
-                          setState(() {});
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: CircleAvatar(radius: 5, backgroundColor: offset == 1500 ? Colors.black : Colors.grey),
-                        ),
-                      ),
-
+                    onTap: () {
+                      offset = 1500;
+                      scrollController.animateTo(1500, duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      setState(() {});
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: CircleAvatar(radius: 5, backgroundColor: offset == 1500 ? Colors.black : Colors.grey),
+                    ),
+                  ),
                 ]),
               )
             ],

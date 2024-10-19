@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:telit_solutions/resource/responsive.dart';
-import 'package:telit_solutions/view/getInTouch/getItTouchMobile.dart';
-import 'package:telit_solutions/view/getInTouch/getItTouchTab.dart';
-import 'package:telit_solutions/view/getInTouch/getItTouchWeb.dart';
+import 'package:telit_solutions/view/footer/footerMobile.dart';
+import 'package:telit_solutions/view/footer/footerTab.dart';
+import 'package:telit_solutions/view/footer/footerWeb.dart';
 
-class GetItTouch extends StatefulWidget {
+class Footer extends StatefulWidget {
   AutoScrollController aScrollController;
 
-  GetItTouch(this.aScrollController, {Key? key}) : super(key: key);
+  Footer(this.aScrollController, {Key? key}) : super(key: key);
 
   @override
-  State<GetItTouch> createState() => _GetItTouchState();
+  State<Footer> createState() => _FooterState();
 }
 
-class _GetItTouchState extends State<GetItTouch> {
+class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
     return Responsive(
-      tabView: GetItTouchTab(widget.aScrollController),
-      mobileView: GetItTouchMobile(widget.aScrollController),
-      webView: GetItTouchWeb(widget.aScrollController),
+      tabView: FooterTab(widget.aScrollController),
+      mobileView: FooterMobile(widget.aScrollController),
+      webView: FooterWeb(widget.aScrollController),
     );
   }
 }

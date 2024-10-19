@@ -1,10 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:telit_solutions/resource/strings.dart';
 
-import '../../resource/appClass.dart';
-import '../../resource/colors.dart';
+import '../../resource/responsive.dart';
 
 class IntroTab extends StatefulWidget {
   AutoScrollController aScrollController;
@@ -16,13 +14,70 @@ class IntroTab extends StatefulWidget {
 }
 
 class _IntroTabState extends State<IntroTab> {
+  final carouselController = CarouselSliderController();
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.transparent,
-      height: AppClass().getMqHeight(context) - 70,
-      margin: EdgeInsets.only(left: AppClass().getMqWidth(context) * 0.01, top: AppClass().getMqHeight(context) * 0.07),
-      padding: EdgeInsets.only(bottom: 50),
+    return SizedBox(
+      height: SizeConfig.getScreenHeight(context) - (SizeConfig.getScreenHeight(context) * 0.17),
+      width: SizeConfig.getScreenWidth(context),
+      child: Stack(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: AbsorbPointer(
+                  child: CarouselSlider(
+                    carouselController: carouselController,
+                    options: CarouselOptions(
+                      aspectRatio: 16 / 9,
+                      viewportFraction: 1,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 3),
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                    ),
+                    // image size should be 1920x1246
+                    items: ["assets/image1.jpg", "assets/image2.jpg", "assets/image3.jpg", "assets/image4.jpg"].map((i) {
+                      return Builder(
+                        builder: (BuildContext context) {
+                          return Image.asset(
+                            i,
+                            height: double.infinity,
+                            width: SizeConfig.getScreenWidth(context),
+                            fit: BoxFit.cover,
+                          );
+                        },
+                      );
+                    }).toList(),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Positioned.fill(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                InkWell(
+                    onTap: () {
+                      carouselController.previousPage();
+                    },
+                    child: Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      size: SizeConfig.getScreenHeight(context) * 0.1,
+                      color: Colors.white24,
+                    )),
+                Spacer(),
+                InkWell(
+                    onTap: () {
+                      carouselController.nextPage();
+                    },
+                    child: Icon(Icons.arrow_forward_ios_rounded, size: SizeConfig.getScreenHeight(context) * 0.1, color: Colors.white24))
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -26,9 +26,7 @@ class _ResponsiveState extends State<Responsive> {
 }
 
 class SizeConfig {
-
   static double getScreenHeight(BuildContext context) => MediaQuery.of(context).size.height;
 
   static double getScreenWidth(BuildContext context) => MediaQuery.of(context).size.width;
-
 }

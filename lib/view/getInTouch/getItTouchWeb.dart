@@ -39,11 +39,10 @@ class _GetItTouchWebState extends State<GetItTouchWeb> {
               borderRadius: BorderRadius.circular(8.0),
               color: AppColors.primaryColor,
             ),
-            child: Text("Get In Touch", style: GoogleFonts.openSans(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontSize: SizeConfig.getScreenWidth(context) * 0.02
-            ),),
+            child: Text(
+              "Get In Touch",
+              style: GoogleFonts.openSans(fontWeight: FontWeight.bold, color: Colors.white, fontSize: SizeConfig.getScreenWidth(context) * 0.02),
+            ),
           )
         ],
       ),

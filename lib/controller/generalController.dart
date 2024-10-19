@@ -1,6 +1,35 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-var hoverProvider = StateProvider<String>((ref) => "");
+var hoverProvider = StateProvider<String>((ref) => "home");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var scrollControlProvider = StateProvider<bool>((ref) => true);
 

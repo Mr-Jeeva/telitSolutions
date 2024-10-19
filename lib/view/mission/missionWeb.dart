@@ -24,13 +24,10 @@ class _MissionWebState extends State<MissionWeb> {
             width: SizeConfig.getScreenWidth(context) * 0.75,
             child: Column(
               children: [
-                Text("\"Our Mission is We bring the finest technology products and services to our clients by ensuring seamless work environment to them.\"",
+                Text(
+                    "\"Our Mission is We bring the finest technology products and services to our clients by ensuring seamless work environment to them.\"",
                     style: GoogleFonts.ubuntu(
-                      height: 1,
-                      fontWeight: FontWeight.bold,
-                      fontSize: SizeConfig.getScreenWidth(context) * 0.035,
-                      color: Colors.white
-                    )),
+                        height: 1, fontWeight: FontWeight.bold, fontSize: SizeConfig.getScreenWidth(context) * 0.035, color: Colors.white)),
                 Padding(
                   padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.02),
                   child: Row(
@@ -38,9 +35,7 @@ class _MissionWebState extends State<MissionWeb> {
                       Text(
                         "#TelitSolutionsMission",
                         style: GoogleFonts.ubuntu(
-                            fontWeight: FontWeight.w500,
-                            fontSize: SizeConfig.getScreenWidth(context) * 0.03,
-                            color: AppColors.secondaryAlterColor),
+                            fontWeight: FontWeight.w500, fontSize: SizeConfig.getScreenWidth(context) * 0.03, color: AppColors.secondaryAlterColor),
                       ),
                     ],
                   ),

@@ -16,10 +16,10 @@ class _OurCultureWebState extends State<OurCultureWeb> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-          top: SizeConfig.getScreenWidth(context) * 0.02,
-          left: SizeConfig.getScreenWidth(context) * 0.08,
-          bottom: SizeConfig.getScreenWidth(context) * 0.02,
-      right: SizeConfig.getScreenWidth(context) * 0.08,
+        top: SizeConfig.getScreenWidth(context) * 0.02,
+        left: SizeConfig.getScreenWidth(context) * 0.08,
+        bottom: SizeConfig.getScreenWidth(context) * 0.02,
+        right: SizeConfig.getScreenWidth(context) * 0.08,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,7 @@ class _OurCultureWebState extends State<OurCultureWeb> {
             ),
           ),
           Padding(
-            padding:  EdgeInsets.only(top: SizeConfig.getScreenWidth(context)* 0.015),
+            padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
             child: Row(
               children: [
                 Expanded(
@@ -42,8 +42,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                     padding: const EdgeInsets.only(right: 10),
                     child: Card(
                       child: Container(
-                        height: SizeConfig.getScreenWidth(context)* 0.14,
-                        padding: EdgeInsets.only(right: 8,left: 8),
+                        height: SizeConfig.getScreenWidth(context) * 0.14,
+                        padding: EdgeInsets.only(right: 8, left: 8),
                         child: Column(
                           children: [
                             Expanded(
@@ -59,7 +59,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                             ),
                             Expanded(
                               flex: 2,
-                              child: Text('We are transparent and open. We communicate clearly and directly. This is how we work, because we see this as the key to a successful collaboration.',
+                              child: Text(
+                                  'We are transparent and open. We communicate clearly and directly. This is how we work, because we see this as the key to a successful collaboration.',
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.ubuntu(
                                     fontSize: SizeConfig.getScreenWidth(context) * 0.013,
@@ -77,8 +78,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                     padding: const EdgeInsets.only(left: 10.0),
                     child: Card(
                       child: Container(
-                        height: SizeConfig.getScreenWidth(context)* 0.14,
-                        padding: EdgeInsets.only(right: 8,left: 8),
+                        height: SizeConfig.getScreenWidth(context) * 0.14,
+                        padding: EdgeInsets.only(right: 8, left: 8),
                         child: Column(
                           children: [
                             Expanded(
@@ -94,7 +95,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                             ),
                             Expanded(
                               flex: 2,
-                              child: Text('Our highly skilled IT professionals are specialised in Java, PHP, React, Angular, Vue.js, AWS. Clean code, simplicity, code reviews and test automation will gaurantee long term stability and maintanability of your solutions.',
+                              child: Text(
+                                  'Our highly skilled IT professionals are specialised in Java, PHP, React, Angular, Vue.js, AWS. Clean code, simplicity, code reviews and test automation will gaurantee long term stability and maintanability of your solutions.',
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.ubuntu(
                                     fontSize: SizeConfig.getScreenWidth(context) * 0.013,
@@ -111,7 +113,7 @@ class _OurCultureWebState extends State<OurCultureWeb> {
             ),
           ),
           Padding(
-            padding:  EdgeInsets.only(top: SizeConfig.getScreenWidth(context)* 0.015),
+            padding: EdgeInsets.only(top: SizeConfig.getScreenWidth(context) * 0.015),
             child: Row(
               children: [
                 Expanded(
@@ -119,8 +121,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                     padding: const EdgeInsets.only(right: 10.0),
                     child: Card(
                       child: Container(
-                        height: SizeConfig.getScreenWidth(context)* 0.14,
-                        padding: EdgeInsets.only(right: 8,left: 8),
+                        height: SizeConfig.getScreenWidth(context) * 0.14,
+                        padding: EdgeInsets.only(right: 8, left: 8),
                         child: Column(
                           children: [
                             Expanded(
@@ -136,7 +138,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                             ),
                             Expanded(
                               flex: 2,
-                              child: Text('We combine our technical skills with business affinity and a critical mindset to deliver the best possible solution for your business. For us adding value to your business is the ultimate goal.',
+                              child: Text(
+                                  'We combine our technical skills with business affinity and a critical mindset to deliver the best possible solution for your business. For us adding value to your business is the ultimate goal.',
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.ubuntu(
                                     fontSize: SizeConfig.getScreenWidth(context) * 0.013,
@@ -154,8 +157,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                     padding: const EdgeInsets.only(left: 10.0),
                     child: Card(
                       child: Container(
-                        height: SizeConfig.getScreenWidth(context)* 0.14,
-                        padding: EdgeInsets.only(right: 8,left: 8),
+                        height: SizeConfig.getScreenWidth(context) * 0.14,
+                        padding: EdgeInsets.only(right: 8, left: 8),
                         child: Column(
                           children: [
                             Expanded(
@@ -171,7 +174,8 @@ class _OurCultureWebState extends State<OurCultureWeb> {
                             ),
                             Expanded(
                               flex: 2,
-                              child: Text('We are always there to help clients with advice and actions. We take ownership, responsibility, and joy in delivering the best possible solutions.',
+                              child: Text(
+                                  'We are always there to help clients with advice and actions. We take ownership, responsibility, and joy in delivering the best possible solutions.',
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.ubuntu(
                                     fontSize: SizeConfig.getScreenWidth(context) * 0.013,
